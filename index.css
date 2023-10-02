@@ -1,0 +1,172 @@
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e6f7ea; 
+    color: #333;
+}
+
+header {
+    background-color: #2e7d32;
+    color: #fff;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+section {
+    padding: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: 3px solid #2e7d32;
+}
+
+video {
+    max-width: 100%;
+}
+
+form label, form input, form textarea {
+    display: block;
+    margin-bottom: 10px;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(5,234,6,1) 0%, rgba(0,212,255,1) 100%);
+    margin: 0;
+    padding: 0;
+    color: black; 
+}
+
+header {
+    background-color: #4CAF50; 
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #2e7d32; 
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #2e7d32; 
+}
+
+h2 {
+    font-size: 28px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #2e7d32; 
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: black; 
+}
+
+a {
+    text-decoration: none;
+    color: #4CAF50; 
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #2e7d32; 
+}
+
+.project {
+    margin-bottom: 20px;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #2e7d32; 
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50; 
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #2e7d32; 
+}
+
+img {
+    max-width: 100%; 
+    height: auto;
+}
+
+#image-container{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 30%;
+    border: 1px black solid;
+    margin-left: auto;
+    margin-right: auto;
+}
