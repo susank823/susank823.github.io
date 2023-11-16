@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Workout</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/workouts">View Workouts</a></li>
+            <li><a href="/workouts/create">Create Workout</a></li>
+        </ul>
+    </nav>
+
+    <h1>Edit Workout</h1>
+    <form action="/workouts/edit/<%= workout._id %>" method="POST">
+        <label for="exerciseName">Exercise Name:</label>
+        <input type="text" id="exerciseName" name="exerciseName" value="<%= workout.exerciseName %>" required>
+
+        <label for="exerciseDate">Exercise Date:</label>
+        <input type="date" id="exerciseDate" name="exerciseDate" value="<%= formatDate(workout.exerciseDate) %>" required>
+
+        <label for="exerciseDuration">Exercise Duration (minutes):</label>
+        <input type="number" id="exerciseDuration" name="exerciseDuration" value="<%= workout.exerciseDuration %>" required>
+
+        <button type="submit">Save Changes</button>
+    </form>
+
+    <script>
+        function formatDate(dateString) {
+            const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+            const formattedDate = new Date(dateString).toLocaleDateString(undefined, options);
+            return formattedDate;
+        }
+    </script>
+</body>
+
+</html>

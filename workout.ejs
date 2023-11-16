@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of Workouts</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/workouts/create">Create Workout</a></li>
+        </ul>
+    </nav>
+
+    <h1>List of Workouts</h1>
+    <ul>
+        <% workouts.forEach((workout) => { %>
+            <li>
+                <%= workout.exerciseName %> - <%= workout.exerciseDate %> - <%= workout.exerciseDuration %> minutes
+                <a href="#" onclick="showDetails('<%= workout._id %>')">View Details</a>
+                <div id="<%= workout._id %>_details" style="display: none;">
+                    <p><strong>Name:</strong> <%= workout.exerciseName %></p>
+                    <p><strong>Date:</strong> <%= workout.exerciseDate %></p>
+                    <p><strong>Duration:</strong> <%= workout.exerciseDuration %> minutes</p>
+                </div>
+            </li>
+        <% }); %>
+    </ul>
+
+    <script>
+        function showDetails(workoutId) {
+            const detailsDiv = document.getElementById(workoutId + '_details');
+            if (detailsDiv.style.display === 'none') {
+                detailsDiv.style.display = 'block';
+            } else {
+                detailsDiv.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+
+</html>

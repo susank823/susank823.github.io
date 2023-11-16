@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Details</title>
+</head>
+
+<body>
+    <h1>Workout Details</h1>
+    <p><strong>Exercise Name:</strong> <%= workout.exerciseName %></p>
+    <p><strong>Exercise Date:</strong> <%= formatDate(workout.exerciseDate) %></p>
+    <p><strong>Exercise Duration:</strong> <%= workout.exerciseDuration %> minutes</p>
+    <a href="/workouts">Back to Workouts</a>
+
+    <script>
+        function formatDate(dateString) {
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            const formattedDate = new Date(dateString).toLocaleDateString(undefined, options);
+            return formattedDate;
+        }
+    </script>
+</body>
+
+</html>

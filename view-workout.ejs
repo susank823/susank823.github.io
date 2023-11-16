@@ -1,0 +1,22 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Workout Details</title>
+</head>
+
+<body>
+    <h1>Workout Details</h1>
+    <ul>
+        <li><strong>Exercise Name:</strong> <%= workout.exerciseName %></li>
+        <li><strong>Exercise Date:</strong> <%= workout.exerciseDate.toISOString().split('T')[0] %></li>
+        <li><strong>Exercise Duration:</strong> <%= workout.exerciseDuration %> minutes</li>
+    </ul>
+    <a href="/workouts">Back to Workouts</a>
+</body>
+
+</html>
